@@ -1,0 +1,38 @@
+QUES29: Write a program to calculate the factorial of a number.
+CODE:
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long factorial = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        factorial = factorial * i;
+    }
+
+    printf("%lld", factorial);
+
+    return 0;
+}
+
+QUES30: Write a program to reverse a given number.
+CODE:
+#include <stdio.h>
+
+int main() {
+    int n, reverse = 0, digit;
+
+    scanf("%d", &n);
+
+    while (n > 0) {
+        digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = n / 10;
+    }
+
+    printf("%d", reverse);
+
+    return 0;
+}
