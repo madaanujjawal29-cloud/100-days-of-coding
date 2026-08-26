@@ -1,4 +1,4 @@
-QUES: Write a program to take a number as input and print its equivalent binary representation.
+QUES31: Write a program to take a number as input and print its equivalent binary representation.
   CODE:
 #include <stdio.h>
 
@@ -25,7 +25,7 @@ int main() {
     return 0;
 }
 
-QUES: Write a program to check if a number is a palindrome.
+QUES32: Write a program to check if a number is a palindrome.
   CODE:
   #include <stdio.h>
 
