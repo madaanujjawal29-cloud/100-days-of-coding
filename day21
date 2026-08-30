@@ -1,0 +1,50 @@
+QUES41: Write a program to swap the first and last digit of a number.
+  CODE:
+#include <stdio.h>
+
+int main() {
+    int n, first, last, divisor = 1, middle, result, temp;
+
+    scanf("%d", &n);
+
+    last = n % 10;
+
+    temp = n;
+    while (temp >= 10) {
+        temp /= 10;
+        divisor *= 10;
+    }
+
+    first = temp;
+
+    middle = (n % divisor) / 10;
+
+    result = last * divisor + middle * 10 + first;
+
+    printf("%d", result);
+
+    return 0;
+}
+
+QUES42:Write a program to check if a number is a perfect number.
+  CODE:
+  #include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+
+    scanf("%d", &n);
+
+    for (i = 1; i < n; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+
+    if (sum == n)
+        printf("Perfect");
+    else
+        printf("Not Perfect");
+
+    return 0;
+}
