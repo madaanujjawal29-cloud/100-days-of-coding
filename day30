@@ -1,0 +1,59 @@
+QUES59:Count even and odd numbers in an array.
+  CODE:
+  #include <stdio.h>
+
+int main() {
+    int n, i, even = 0, odd = 0;
+    int a[100];
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
+
+    printf("Even: %d\n", even);
+    printf("Odd: %d", odd);
+
+    return 0;
+}
+
+QUES60:Count positive, negative, and zero elements in an array.
+  CODE:
+  #include <stdio.h>
+
+int main() {
+    int n, i;
+    int positive = 0, negative = 0, zero = 0;
+    int a[100];
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        if (a[i] > 0) {
+            positive++;
+        } else if (a[i] < 0) {
+            negative++;
+        } else {
+            zero++;
+        }
+    }
+
+    printf("Positive: %d\n", positive);
+    printf("Negative: %d\n", negative);
+    printf("Zero: %d", zero);
+
+    return 0;
+}
