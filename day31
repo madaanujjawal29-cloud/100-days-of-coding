@@ -1,0 +1,55 @@
+QUES61:Search for an element in an array using linear search.
+  CODE:
+  #include <stdio.h>
+
+int main() {
+    int n, a[100], key, i, found = 0;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &key);
+
+    for (i = 0; i < n; i++) {
+        if (a[i] == key) {
+            printf("Element found at position %d", i + 1);
+            found = 1;
+            break;
+        }
+    }
+
+    if (found == 0) {
+        printf("Element not found");
+    }
+
+    return 0;
+}
+
+QUES62:Reverse an array without taking extra space.
+  CODE:
+#include <stdio.h>
+
+int main() {
+    int n, a[100], i, temp;
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (i = 0; i < n / 2; i++) {
+        temp = a[i];
+        a[i] = a[n - i - 1];
+        a[n - i - 1] = temp;
+    }
+
+    for (i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
