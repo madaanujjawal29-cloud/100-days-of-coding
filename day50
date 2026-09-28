@@ -1,0 +1,44 @@
+QUES99:Change the date format from dd/04/yyyy to dd-Apr-yyyy.
+CODE:
+#include <stdio.h>
+
+int main() {
+    int day, month, year;
+
+    scanf("%d/%d/%d", &day, &month, &year);
+
+    char months[12][4] = {
+        "Jan", "Feb", "Mar", "Apr",
+        "May", "Jun", "Jul", "Aug",
+        "Sep", "Oct", "Nov", "Dec"
+    };
+
+    printf("%02d-%s-%04d", day, months[month - 1], year);
+
+    return 0;
+}
+QUES100:Print all sub-strings of a string.
+CODE:
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, j, k, n = 0;
+
+    scanf("%s", str);
+
+    while (str[n] != '\0') {
+        n++;
+    }
+
+    for (i = 0; i < n; i++) {
+        for (j = i; j < n; j++) {
+            for (k = i; k <= j; k++) {
+                printf("%c", str[k]);
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
